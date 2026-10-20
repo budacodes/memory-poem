@@ -1,0 +1,24 @@
+<div class="container">
+  @if (isLoading()) {
+    <p>Carregando...</p>
+  } @else if (errorMessage) {
+    <p>{{ errorMessage }}</p>
+  } @else if (doesCurrentIpExist) {
+    <h1>Tão Cedo Passa Tudo Quanto Passa</h1>
+
+    <p>Tão cedo passa tudo quanto passa!</p>
+  } @else {
+    <ng-container>
+      <p>Morre tão jovem ante os deuses quanto</p>
+      <p>Morre! Tudo é tão pouco!</p>
+      <p>Nada se sabe, tudo se imagina.</p>
+      <p>Circunda-te de rosas, ama, bebe</p>
+      <p>E cala. O mais é nada.</p>
+
+      <div class="author">
+        <strong><p>Ricardo Reis, in "Odes"</p></strong>
+        <strong><p>Heterónimo de Fernando Pessoa</p></strong>
+      </div>
+    </ng-container>
+  }
+</div>

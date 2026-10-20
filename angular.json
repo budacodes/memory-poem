@@ -1,13 +1,21 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+<<<<<<< HEAD
   "cli": {
     "analytics": "cf9e11de-3c40-4cbf-adce-861c90589975"
   },
   "version": 1,
+=======
+  "version": 1,
+  "cli": {
+    "packageManager": "npm"
+  },
+>>>>>>> master
   "newProjectRoot": "projects",
   "projects": {
     "memory-poem": {
       "projectType": "application",
+<<<<<<< HEAD
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -16,11 +24,15 @@
           "strict": true
         }
       },
+=======
+      "schematics": {},
+>>>>>>> master
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
+<<<<<<< HEAD
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/memory-poem",
@@ -131,4 +143,63 @@
     }
   },
   "defaultProject": "memory-poem"
+=======
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["src/styles.css"]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "memory-poem:build:production"
+            },
+            "development": {
+              "buildTarget": "memory-poem:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
+        }
+      }
+    }
+  }
+>>>>>>> master
 }
