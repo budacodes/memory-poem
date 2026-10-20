@@ -1,1 +1,0 @@
-{"version":3,"sources":["./styles.scss"],"names":[],"mappings":";AACA;EACI;EACA;EACA;AACJ,C","file":"styles.css","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Fira+Code&display=swap\");\r\nbody {\r\n    font-family: \"Fira Code\", monospace;\r\n    font-size: 16px;\r\n    margin: 0px;\r\n}"],"sourceRoot":"webpack:///"}
